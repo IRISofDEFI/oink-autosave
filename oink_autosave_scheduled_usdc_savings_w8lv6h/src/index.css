@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Poppins from Google Fonts ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Oink brand tokens — light mode ────────────────────────────────────────── */
+:root {
+  --oink-green:      #A8E063;
+  --oink-dark:       #1E6B42;
+  --oink-black:      #0D0D0D;
+  --oink-charcoal:   #2A2A2A;
+  --oink-white:      #FFFFFF;
+
+  /* semantic aliases used throughout the app */
+  --ink:             var(--oink-black);
+  --subtle:          #3D3D3D;
+  --muted:           #6B7280;
+  --accent:          var(--oink-dark);
+  --accent-hover:    #25844F;
+  --accent-light:    var(--oink-green);
+  --success:         var(--oink-dark);
+  --warn:            #B45309;
+  --danger:          #C0392B;
+
+  /* surfaces */
+  --surface-bg:      #F4FAF1;
+  --card-bg:         rgba(255, 255, 255, 0.80);
+  --card-border:     rgba(168, 224, 99, 0.30);
+  --inner-bg:        rgba(255, 255, 255, 0.60);
+  --inner-border:    rgba(168, 224, 99, 0.25);
+  --sheet-bg:        rgba(255, 255, 255, 0.97);
+}
+
+/* ── Dark mode overrides ────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:           #F0F7EC;
+    --subtle:        #C8D5C0;
+    --muted:         #8A9E82;
+    --accent:        var(--oink-green);
+    --accent-hover:  #C2F07A;
+    --accent-light:  var(--oink-green);
+    --success:       var(--oink-green);
+    --warn:          #F6B752;
+    --danger:        #E05A5A;
+
+    --surface-bg:    #0D1610;
+    --card-bg:       rgba(30, 45, 26, 0.75);
+    --card-border:   rgba(168, 224, 99, 0.18);
+    --inner-bg:      rgba(20, 35, 16, 0.70);
+    --inner-border:  rgba(168, 224, 99, 0.14);
+    --sheet-bg:      rgba(15, 25, 12, 0.97);
+  }
+}
